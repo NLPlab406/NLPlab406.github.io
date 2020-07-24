@@ -17,10 +17,19 @@
   <meta name="description" content="">
   <meta name="author" content="NLP">
   <meta name="keywords" content="">
-  <title>归档 - 东北石油大学自然语言处理与智能实验室</title>
+  <title>关于 - 东北石油大学自然语言处理与智能实验室</title>
 
   <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
 
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/github-gist.min.css" />
+  
+
+  
 
 
 <!-- 主题依赖的图标库，不要自行修改 -->
@@ -154,27 +163,52 @@
         <div class="py-5" id="board"
           >
           
+            <div class="about-avatar">
+              <img src="/img/ava.jpg" srcset="/img/loading.gif"
+                   class="img-fluid" alt="avatar">
+            </div>
+          
           <div class="container">
             <div class="row">
               <div class="col-12 col-md-10 m-auto">
                 
 
-<div class="list-group">
-  <p class="h4">共计 1 篇文章</p>
-  <hr>
-  
-    
+<div class="text-center">
+  <div class="about-info">
+    <div class="about-name">东油NLP</div>
+    <div class="about-intro">东油NLP</div>
+    <div class="about-icons">
       
-      <p class="h5">2020</p>
-    
-    <a href="/2020/07/24/%E4%BB%8E%E8%AE%BE%E8%AE%A1%E5%BE%AA%E7%8E%AF%E4%B8%8D%E5%8F%98%E9%87%8F%E6%B5%85%E8%B0%88%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F/" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">从设计循环不变量浅谈快速排序</span>
-      <span style="float: right;">07-24</span>
-    </a>
-  
+        
+        
+        
+        <a href="https://github.com/NLPlab406" class="
+           hint--bottom hint--rounded"
+           aria-label=GitHub
+        >
+          <i class="iconfont icon-github-fill" aria-hidden="true"></i>
+          
+        </a>
+      
+        
+        
+        
+        <a href="javascript:;" class="qr-trigger
+           "
+           
+        >
+          <i class="iconfont icon-wechat-fill" aria-hidden="true"></i>
+          
+            <img class="qr-img" src="/img/favicon.png" srcset="/img/loading.gif" alt="qrcode" />
+          
+        </a>
+      
+    </div>
+  </div>
 </div>
-
-
+<div class="mt-5 markdown-body">
+  <h2 id="东北石油大学计算机与信息技术学院"><a href="#东北石油大学计算机与信息技术学院" class="headerlink" title="东北石油大学计算机与信息技术学院"></a>东北石油大学计算机与信息技术学院</h2><h3 id="自然语言处理与智能实验室"><a href="#自然语言处理与智能实验室" class="headerlink" title="自然语言处理与智能实验室"></a>自然语言处理与智能实验室</h3><h4 id="团队简介"><a href="#团队简介" class="headerlink" title="团队简介"></a>团队简介</h4><h5 id="地址"><a href="#地址" class="headerlink" title="地址"></a>地址</h5>
+</div>
 
               </div>
             </div>
@@ -291,7 +325,7 @@
     var typed = new Typed('#subtitle', {
       strings: [
         '  ',
-        "归档&nbsp;",
+        "关于&nbsp;",
       ],
       cursorChar: "_",
       typeSpeed: 70,
@@ -305,6 +339,21 @@
   </script>
 
 
+
+  <script  src="https://cdn.staticfile.org/anchor-js/4.2.2/anchor.min.js" ></script>
+  <script>
+    anchors.options = {
+      placement: "right",
+      visible: "hover",
+      
+    };
+    var el = "h1,h2,h3,h4,h5,h6".split(",");
+    var res = [];
+    for (item of el) {
+      res.push(".markdown-body > " + item)
+    }
+    anchors.add(res.join(", "))
+  </script>
 
 
 
