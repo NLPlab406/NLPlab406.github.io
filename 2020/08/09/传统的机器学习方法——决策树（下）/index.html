@@ -83,10 +83,8 @@ function activateLightMode(){
 <h2 id="剪枝算法"><a href="#剪枝算法" class="headerlink" title="剪枝算法"></a>剪枝算法</h2><p>&emsp;&emsp;输入：生成算法产生的整个树 T，参数 α；<br>&emsp;&emsp;输出：修建后的子树 Tα。</p>
 <ol>
 <li>计算每个结点的经验熵；</li>
-<li>递归地从树的叶结点向上回缩。<br>设一组叶结点回缩到父结点之前与之后的整体树分别为 Tb 与 Ta ，其对应的损失函数值分别时 Cα(Tb) 与 Cα(Ta) ，如果 Cα(Ta)&lt;=Cα(Tb) ,则进行剪枝，即将父结点变成新的叶结点。<ol>
+<li>递归地从树的叶结点向上回缩。设一组叶结点回缩到父结点之前与之后的整体树分别为 Tb 与 Ta ，其对应的损失函数值分别时 Cα(Tb) 与 Cα(Ta) ，如果 Cα(Ta)&lt;=Cα(Tb) ,则进行剪枝，即将父结点变成新的叶结点。  </li>
 <li>返回2，直至不能继续为止，得到损失函数最小的子树 Tα。</li>
-</ol>
-</li>
 </ol>
 <p><a href="https://img-blog.csdnimg.cn/20200809164842535.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80OTMxMzMxOQ==,size_16,color_FFFFFF,t_70" target="_blank" rel="noopener" data-fancybox="group" data-caption="剪枝" class="fancybox"><img alt="剪枝" title="剪枝" data-src="https://img-blog.csdnimg.cn/20200809164842535.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80OTMxMzMxOQ==,size_16,color_FFFFFF,t_70" class="lazyload"></a></p>
 <h1 id="CART算法"><a href="#CART算法" class="headerlink" title="CART算法"></a>CART算法</h1><h2 id="算法介绍"><a href="#算法介绍" class="headerlink" title="算法介绍"></a>算法介绍</h2><p>&emsp;&emsp;CART算法由一下两步组成：</p>
@@ -144,11 +142,7 @@ function activateLightMode(){
 <ol>
 <li>设k=0, T=T0</li>
 <li>设α=+∞</li>
-<li>自下而上地对各个内部结点t计算C(Tt)，|Tt| 以及</li>
-</ol>
-<p><a href="https://img-blog.csdnimg.cn/20200809181004221.png" target="_blank" rel="noopener" data-fancybox="group" data-caption="5" class="fancybox"><img alt="5" title="5" data-src="https://img-blog.csdnimg.cn/20200809181004221.png" class="lazyload"></a></p>
-<p>&emsp;&emsp;这里，Tt 表示以 t 为根结点的子树，C(Tt) 是对训练数据的预测误差，|Tt| 是 Tt 的叶结点个数。</p>
-<ol>
+<li>自下而上地对各个内部结点t计算C(Tt)，|Tt| 以及<br><a href="https://img-blog.csdnimg.cn/20200809181004221.png" target="_blank" rel="noopener" data-fancybox="group" data-caption="5" class="fancybox"><img alt="5" title="5" data-src="https://img-blog.csdnimg.cn/20200809181004221.png" class="lazyload"></a><br>这里，Tt 表示以 t 为根结点的子树，C(Tt) 是对训练数据的预测误差，|Tt| 是 Tt 的叶结点个数。</li>
 <li>自上而下地访问内部结点 t ，如果有 g(t) = α ,进行剪枝，并对叶结点 t 以多数表决法表决其类，得到树 T 。</li>
 <li>设 k=k+1, αk=α, Tk=T。</li>
 <li>如果 T 不是由根结点单独构成的树，则回到步骤4。</li>
